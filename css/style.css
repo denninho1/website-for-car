@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap');
+*{
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+    text-decoration: none; list-style: none; 
+    outline: none; border: none;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 28px;
+    overflow-x: hidden ;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #2B2B2B;
+}
+
+/*HEADER*/
+
+.header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 1rem 4rem;
+    text-transform: uppercase;
+}
+/*NAV HEADER*/
+
+.header .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .nav-header #logo{
+    color: white;
+    font-size: 2.7rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+}
+
+.header .nav-header #logo span{
+    color:#3DB2FF;
+}
+
+.header .navigation {
+    display: flex;
+} 
+
+.header .nav-header .navigation li {
+    margin: 0 1rem;
+}
+
+.header .nav-header .navigation li a {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    transition: .2s ease-in;
+    letter-spacing: .2rem;
+}
+
+.header .nav-header .navigation a:hover {
+    color: #3DB2FF;
+    border-bottom: 1px solid #3DB2FF;
+    padding-bottom: .3rem;
+}
+
+
+.header .nav-header .nav-icons {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.header .nav-header .nav-icons {
+    display: flex;
+}
+
+.header .nav-header .nav-icons li i {
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.header .nav-header .nav-icons li i:hover {
+    color: #3DB2FF;
+}
+
+/* SEARCH STYLES */
+
+.search-header {
+    z-index: 1001;
+    position: absolute;
+    top: -100%; right: 2rem;
+    transition: .3s ease-in-out;
+    display: flex;
+    padding: 0 2rem;
+}
+.search-header.active {
+    top:6rem;
+    right: 2rem;
+}
+
+.search-header input {
+    color: black;
+    width: 50rem;
+    height: 5.5rem;
+    padding: 0 .9rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 1.6rem;
+    box-shadow: .1rem .1rem .6rem rgba(0, 0, 0, 0.8);
+}
+
+.search-header .pesquisa {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 1.5rem;
+    height: 5.5rem;
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: .1rem .1rem .6rem rgba(0, 0, 0, 0.8);
+}
+
+.search-header .pesquisa i {
+    color: #000;
+}
+
+.search-header i:hover {
+    background-color: #ccc;
+}
+
+.login{
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    width: 340px;
+    height: 100%;
+    border-radius: 5px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+    padding: 3rem 2.8rem;
+    box-shadow: .5rem 0 5rem rgba(0, 0, 0, 0.8);
+    transform: scale(0); 
+    transition: .2s linear;
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+}
+
+.login.active {
+    transform: scale(1);
+}
+
+.login h2 {
+    font-size: 3.5rem;
+}
+
+.login #close-login {
+    align-self: end;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.login input {
+    font-size: 1.8rem;
+    color: black;
+    height: 5rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 0 .8rem;
+    border-radius: 5px;
+    letter-spacing: .1rem;
+    font-weight: 800;
+}
+
+.login button {
+    width: 70%;
+    height: 5rem;
+    margin: 0.6rem auto;
+    cursor: pointer;
+    background-color: #3DB2FF;
+    font-size: 1.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    border: none;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 5px;
+    letter-spacing: .1rem;
+}
+
+.login .nav-login #esqueci-senha {
+    text-decoration: underline;
+    letter-spacing: .1rem;  
+    font-size: 1.8rem;
+}
+
+.login .nav-login #esqueci-senha:hover {
+    color: #3DB2FF;
+}
+
+.login .nav-login p {
+    font-size: 1.5rem;
+    margin: 3.5rem 0 2.5rem;
+}
+
+.login .nav-login #criar-conta {
+    padding: 2rem;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 1.7rem;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-weight: 800;
+}
+
+
+.navigation-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0; right: 0;
+    height: 100%;
+    background-color: #1C5073;
+    width: 35rem;
+    z-index: 1001;
+    box-shadow: 1rem 0 5rem black;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: .1rem;
+    font-size: 2rem;
+    transform: scale(0);
+    transition: .2s linear;
+}
+.navigation-menu.active {
+    transform: scale(1);
+}
+
+.navigation-menu #close-menu {
+    align-self: end;
+    margin: 3rem;
+    cursor: pointer;
+}
+
+.navigation-menu li {
+    width: 100%;
+    text-align: center;
+}
+
+.navigation-menu li:hover {
+    background-color: #3497D9;
+}
+
+.navigation-menu li a {
+    padding: 2rem 0;
+    display: block;
+}
+
+
+/* SECTION MAIN */
+
+.main {
+    background: url(../imagens/bg2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+    padding: 19rem 4rem 0;
+}
+
+.main .container-main h1 {
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.main .container-main p {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 1.4rem 0 8rem;
+}
+.main .container-main span {
+    color:#3DB2FF ;
+    font-weight: bold;
+}
+
+.main .container-main .btn a{
+    padding: 20px 30px;
+    letter-spacing: 1px;
+    border: 2px solid #3DB2FF;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 2rem;
+    text-transform: uppercase;
+
+}
+
+.main .container-main .btn a:hover {
+    background-color: #4fb8fd;
+}
+
+
+/*SECTION AUTOMOVEIS*/
+
+.box-automoveis {
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+
+}  
+
+.section-cars{
+    text-transform: uppercase;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.conteiner-cars {
+    margin-bottom: 4rem;
+    padding: 0 30px;
+}
+
+.conteiner-cars h1 {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Rubik',sans-serif;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.conteiner-car img {
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    margin-bottom: 1.7rem;
+}
+
+
+.btn-car {
+    
+    display: flex;
+    justify-content: center;
+}
+
+.btn-car a { 
+    padding: 15px 40px;
+    text-transform: uppercase;
+    border: 2px solid #3DB2FF;
+    color: #fff;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-car a:hover {
+    background-color: #4fb8fd;
+}
+
+/*FORM NOVIDADES*/
+
+.form-novidades {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+}
+
+.form-novidades h1 {
+    text-transform: uppercase;
+    color: #3DB2FF;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    font-size: 40px;
+
+}
+
+.form-novidades p {
+    letter-spacing: 1px;
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.form-novidades input {
+    display: block;
+    margin: 0 auto;
+    height: 3rem;
+    color:black ;
+    margin-bottom: 1rem;
+}
+
+.form-novidades input[type="text"], input[type="email"] {
+    padding: 0 10px;
+    width: 30rem;
+    border-radius: 5px;
+    border: none;
+}
+
+.form-novidades input[type="submit"] {
+    color: #fff;
+    cursor: pointer;
+    width: 15rem;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-color: #3DB2FF;
+    border-radius: 5px;
+    transition: all 0.3s;
+    border: none;
+}
+
+.form-novidades input[type="submit"]:hover {
+    background-color: #4fb8fd;
+    box-shadow: 1px 1px 7px #4fb8fd;
+}
+
+/**/
+
+.nav-infos {
+    max-width: 100%;
+    margin-top: 4rem;
+    padding: 100px 0;
+}
+
+
+.nav-infos .container-infos {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-infos .container-infos .infos {
+    padding: 20px 20px ;
+}
+
+.nav-infos .container-infos .infos h3 {
+   color: #3DB2FF;
+}
+
+.nav-infos .container-infos .infos ul li {
+    padding: 8px 0;
+}
+
+.nav-infos .container-infos .rede-sociais ul li a {
+    padding: 0 5px;
+    transition: all 0.2s;
+}
+
+.nav-infos .container-infos .rede-sociais ul li a:hover{
+    padding-left: 15px;
+    color: #3DB2FF;
+}
+
+.nav-infos .container-infos .sobre {
+    max-width: 500px;
+}
+
+.nav-infos .container-infos .sobre h1 {
+    color: #3DB2FF;
+    margin-bottom: 10px;
+}
+.nav-infos .container-infos .sobre p {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #3DB2FF ;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-size: 17px;
+    padding: 5px;
+   letter-spacing: 2px;
+}
+
+footer p, footer a, footer i{
+    color: #2B2B2B;
+}
+
+footer a:hover {
+    color: white;
+    text-shadow: 1px 1px 7px white;
+}
+
+
+/*media quieres*/
+
+@media only screen and (max-width: 991px){
+    
+    .header .nav-header{
+        padding: 0 1rem;
+    }
+
+    .navegation {
+        display: none;
+    }
+
+    .navegation2 ul li #menu {
+        display: block;
+    }
+
+    .form-novidades h1 {
+        font-size: 2.1rem;
+        
+
+    }
+
+    .container-infos {
+       flex-wrap: wrap;
+    }
+
+    
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .form-novidades {
+        padding: 5rem 30px;
+    }
+
+
+    footer {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .form-novidades input[type="text"], input[type="email"], input[type="submit"] {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 420px) {
+
+}
+
+
+@media (max-width: 320px) {
+
+    .header .nav-header{
+        padding: 0 1rem;
+    }
+
+    .header .nav-header #logo {
+        font-size: 1rem;
+    }
+
+    .main .conteiner-main {
+        padding: 0 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .main .conteiner-main h1 {
+        font-size: 2.3rem;
+    }
+
+    .main .conteiner-main p {
+        font-size: 1rem;
+    }
+
+    .main .conteiner-main .btn a {
+        padding: 15px 20px;
+        font-size: 0.9rem;
+    }
+
+    .form-novidades h1 {
+        font-size: 1.4rem;
+    }
+
+    .form-novidades p {
+        font-size: 0.8rem;
+    }
+
+    .form-novidades input[type="text"], input[type="email"], input[type="submit"] {
+        width: 100%;
+    }
+
+
+    .nav-infos .container-infos
+
+    footer {
+        font-size: 10px;
+    }
+}

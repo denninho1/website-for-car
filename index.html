@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--link icon-->
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png"/>
+    <!--link css-->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+    <!--link font awesomes-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Logo - Automovéis Esportivos</title>
+  </head>
+  <body>
+    <!--Header-->
+    <header class="header">
+      <nav class="nav-header">
+        <a href="index.html" id="logo"><h1>L<span>o</span>g<span>o</span></h1></a>
+        
+          <ul class="navigation">
+            <li><a href="#carros">Carros</a></li>
+            <li><a href="#motos">Motos</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+          </ul>
+  
+          <ul class="nav-icons">
+            <li><i class="fas fa-bars" id="menu"></i></li>
+            <li><i class="fas fa-search" id="search"></i></li>
+            <li><i class="fas fa-user-alt" id="login"></i></li>
+          </ul>
+      </nav>
+    </header>
+
+    <div class="search-header">
+        <input type="text" id="pesquisa" placeholder="O que esta procurando ?" />
+        <div class="pesquisa">
+          <i class="fas fa-search" id="pesquisar"></i>
+        </div>
+    </div>
+
+    <form action="" class="login">
+      <i class="fas fa-times" id="close-login"></i>
+      <h2>Login</h2>
+      <div class="inputs-login">
+        <input type="text" placeholder="Usuário" required/>
+        <input type="password" placeholder="Senha" required />
+        <button>Entrar</button>
+      </div>
+
+      <div class="nav-login">
+        <a href="#" id="esqueci-senha">Esqueci minha senha</a>
+        <p>Não tem uma conta ?</p>
+        <a href="cadastro.html" id="criar-conta">Criar uma conta</a>
+      </div>
+    </form>
+
+        <ul class="navigation-menu">
+          <i class="fas fa-times" id="close-menu"></i>
+          <li><a href="#carros">Carros</a></li>
+          <li><a href="#motos">Motos</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+        </ul>
+
+
+    <!--section header end-->
+
+    <!--section main start-->
+
+    <main class="main">
+      <div class="container-main">
+        <h1>Automovéis esportivos</h1>
+        <p>Lorem ipsum dolor sit, <span>amet consectetur</span> adipisicing elit.<br>
+          Ratione, aut quasi!</p>
+        <div class="btn">
+          <a href="localizacao.html">Onde nos achar <i class="fas fa-map-marker-alt" id="localizacao"></i></a>
+        </div>
+      </div>
+    </main>
+
+    <!--section cars start-->
+
+    <div class="box-automoveis" id="carros">
+      <div class="titulo-automoveis">
+        <h1>Carros</h1>
+      </div>
+    </div>
+
+    <section class="section-cars">
+      <div class="conteiner-cars">
+        <h1>Modelo <span>A</span></h1>
+        <div class="conteiner-car">
+          <img src="imagens/bg2.jpg" alt="" />
+          <div class="btn-car">
+            <a href="#">Saiba Mais</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="box-automoveis" id="motos">
+      <div class="titulo-automoveis">
+        <h1>Motos</h1>
+      </div>
+    </div>
+
+    <section class="section-cars">
+      <div class="conteiner-cars">
+        <h1>Modelo <span>A</span></h1>
+        <div class="conteiner-car">
+          <img src="imagens/moto1.jpg" alt="" />
+          <div class="btn-car">
+            <a href="#">Saiba Mais</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Fim section cars-->
+
+    <form action="" class="form-novidades">
+        <h1>Fique por dentro das novidades</h1>
+        <p>Insira seu nome e e-mail logo abaixo <i class="bi bi-arrow-down"></i></p>
+        <input type="text" id="nome" placeholder="Seu nome" required />
+        <input type="email" id="email" placeholder="E-mail" required />
+        <input type="submit" id="btn-novidade" value="enviar">
+    </form>
+
+    <nav class="nav-infos">
+      <div class="container-infos">
+        <div class="infos" id="contato">
+          <h3>Contatos</h3>
+          <ul>
+            <li><i class="bi bi-telephone"></i> Ligue (055 00 97777-9999)</li>
+            <li><i class="bi bi-whatsapp"></i> WhatsApp (055 00 97777-9999)</li>
+            <li><i class="bi bi-emoji-angry"></i> Reclamação (055 00 97777-9999)</li>
+            <li><i class="bi bi-person-workspace"></i> <a href="#">Atendimento no site</a></li>
+          </ul>
+        </div>
+
+        <div class="infos rede-sociais">
+          <h3>Redes Sociais</h3>
+          <ul>
+            <li><i class="bi bi-instagram"></i><a href="#"> Instagram</a></li>
+            <li><i class="bi bi-facebook"></i><a href="#"> Facebook</a></li>
+            <li><i class="bi bi-whatsapp"></i><a href="#"> Twitter</a></li>
+            <li><i class="bi bi-youtube"></i><a href="#">Youtube</a></li>
+          </ul>
+        </div>
+
+        <div class="infos sobre" id="sobre">
+          <h1>Sobre L<span>o</span>g<span>o</span></h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
+            sint, ipsum rerum doloremque distinctio non?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+            suscipit eligendi harum excepturi quas odit doloribus fugiat tempore
+            accusamus quisquam?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+            distinctio, qui quos voluptatibus optio eaque officiis
+            exercitationem itaque nesciunt facilis illo eligendi ullam corrupti
+            veniam nemo, sequi, quod error earum?
+          </p>
+        </div>
+      </div>
+    </nav>
+
+    <footer>
+      <p>
+        Copyright logo 2021 Brasil - site fictício -
+        <a href="https://www.instagram.com/denninho1/"
+          ><i class="bi bi-instagram"></i> Dennis Cesar</a
+        >
+      </p>
+    </footer>
+
+
+    <script type="text/javascript" src="js/App.js" ></script>
+  </body>
+</html>
